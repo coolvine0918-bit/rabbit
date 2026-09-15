@@ -1,0 +1,6 @@
+{
+  "name": "기본권 지킴이 달토끼의 추석 선물 대작전",
+  "description": "사례를 통해 침해된 기본권과 기본권 제한 사유를 학습하고, 달토끼와 함께 5분 동안 감을 따고 추석 선물을 획득하는 헌법 교육 퀴즈 게임입니다. 학번과 이름, 점수가 구글 시트에 실시간 연동 기록됩니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
