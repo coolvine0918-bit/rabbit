@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trophy, FileSpreadsheet, ExternalLink, Download, RotateCcw, BookOpen, CheckCircle, Award, ListFilter } from 'lucide-react';
+import { Trophy, FileSpreadsheet, ExternalLink, Download, BookOpen, CheckCircle, Award, ListFilter } from 'lucide-react';
 import { StudentInfo, GiftItem, GameRecord } from '../types';
 import { CONSTITUTIONAL_CASES } from '../data/cases';
 import { sendRecordToGoogleSheet, GOOGLE_APPS_SCRIPT_WEBHOOK_URL } from '../utils/googleSheets';
@@ -11,7 +11,6 @@ interface GameOverModalProps {
   incorrectCount: number;
   gifts: GiftItem[];
   spreadsheetId: string;
-  onPlayAgain: () => void;
 }
 
 export const GameOverModal: React.FC<GameOverModalProps> = ({
@@ -21,7 +20,6 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
   incorrectCount,
   gifts,
   spreadsheetId,
-  onPlayAgain,
 }) => {
   const [activeTab, setActiveTab] = useState<'summary' | 'leaderboard' | 'review'>('summary');
   const [records, setRecords] = useState<GameRecord[]>([]);
@@ -439,13 +437,9 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
             </span>
           </div>
 
-          <button
-            onClick={onPlayAgain}
-            className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-jua text-sm sm:text-base rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 cursor-pointer transition active:scale-98"
-          >
-            <RotateCcw className="w-4 h-4" />
-            <span>다시 도전하기</span>
-          </button>
+          <div className="text-xs text-emerald-400 font-jua px-3 py-1.5 bg-emerald-950/50 border border-emerald-800/40 rounded-lg">
+            ✨ 퀴즈 참여 및 점수 기록 완료
+          </div>
         </div>
       </div>
     </div>

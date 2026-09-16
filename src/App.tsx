@@ -478,24 +478,6 @@ export default function App() {
           incorrectCount={incorrectCount}
           gifts={collectedGifts}
           spreadsheetId={SPREADSHEET_ID}
-          onPlayAgain={() => {
-            setGameState('PLAYING');
-            setScore(0);
-            setCorrectCount(0);
-            setIncorrectCount(0);
-            setCollectedGifts([]);
-            setCurrentIndex(0);
-            setRetryQueue([]);
-            setAttempts(0);
-            setIsSolved(false);
-            setSelectedChoice(null);
-            setWrongChoices([]);
-            setComboCount(0);
-            setIsFever(false);
-            setEvolutionLevel(1);
-            setRabbitMood('idle');
-            setRabbitSpeech('새로운 5분 도전 시작! 이번에도 힘내봐요!');
-          }}
         />
       )}
 
